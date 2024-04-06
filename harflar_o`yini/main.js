@@ -4,7 +4,7 @@ var randomIndex1 = Math.floor(Math.random() * 36);
 var time=-1
 function taxmin() { 
     document.querySelector('.main_action').style="display:none;"
-    document.querySelector('.body_game').style="display:grid;"
+    document.querySelector('.main_game').style="display:block;"
     document.querySelector(".body_game").innerHTML=""
     time=15
     a=[]
@@ -41,12 +41,21 @@ function selectP(b,key){
     console.log(key);
 if(a[randomIndex1]==b ){
     document.querySelectorAll(".bukva")[key].style="color:green !important;"
-}else{
-    if(key!=-1){
-        document.querySelectorAll(".bukva")[key].style="color:red !important;"
-}
-}
 setTimeout(() => {
 taxmin()  
 }, 1000);
+}else{
+    if(key!=-1){
+        document.querySelectorAll(".bukva")[key].style="color:red !important;"
+        setTimeout(() => {
+            document.querySelectorAll(".bukva")[key].style="color:black !important;"
+
+            }, 1000)
+}else{
+    setTimeout(() => {
+        taxmin()  
+        }, 100);
+}
+}
+
 }
