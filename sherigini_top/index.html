@@ -11,30 +11,31 @@
 </head>
 <body>
     <nav>
-        <div class="timer"><i class='bx bx-time-five'></i> ТАЙМЕР: 15 секунд</div>
+        <div class="timer"><i class='bx bx-time-five'></i> ТАЙМЕР: 60 секунд</div>
     </nav>
 <header>
     <div onclick="window.location.reload()" style="cursor: pointer;" class="search">
         <div class="line"></div>
       <div class="image_icons"> <img src="./img/Group 419.png" alt="">  </div> 
-      <h3>ПОИСК БУКВ</h3>
+      <h3>ПАРЫ ПО КАРТИНКАМ</h3>
     </div>
 </header>
 <main>
    <div class="main_action">
-    <h1>ПОИСК БУКВ</h1>
-    <p>Ищи букву, которая расположена над таблицей, и нажимай на неё. Делать это нужно как можно быстрее!</p>
-    <button onclick="taxmin()">НАЧАТЬ ТРЕНИРОВКУ</button>
+    <h1>ПАРЫ ПО КАРТИНКАМ</h1>
+    <p>Под каждой клеткой спрятан предмет. Тебе необходимо запомнить эти предметы и найти их пары. Делать это нужно как можно быстрее!</p>
+    <button onclick="render_data()" >НАЧАТЬ ТРЕНИРОВКУ</button>
    </div>
+  
    <div class="main_game">
-    <div class="title">НАЙДИ БУКВУ A</div>
+    <div class="title">НАЙДИ ПАРУ</div>
     <div class="body_game">
-    
     </div>
     <h3 style="margin-top: 30px;" class="rekord"></h3>
     <!-- <button style="margin-top: 30px;" onclick="taxmin()">НАЧАТЬ ТРЕНИРОВКУ</button> -->
    </div>
 </main>
+<script src="./data.js"></script>
 <script src="./main.js"></script>
 </body>
 </html>

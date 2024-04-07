@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 *{padding: 0;
 margin: 0;
+font-family: "Open Sans", sans-serif;
 }
 
 /* navbar */
@@ -15,13 +17,11 @@ height: 100px;
 justify-content: end;
 display: flex;
 align-items: center;
-font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 color: white;
 font-size: 23px;
 font-weight: 700;
 line-height: 19.5px;
 text-align: left;
-
 }
 
 .timer .bx-time-five{
@@ -30,7 +30,7 @@ text-align: left;
 }
 
 
-@media(max-width:1200px){
+@media(max-width:1600px){
     .timer{
         height: 62px;
 border-radius: 8px 8px 0px 0px;
@@ -77,14 +77,14 @@ align-items: center;
     height: 40px;
 }
 .search h3{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
 font-size: 23px;
 font-weight: 600;
 line-height: 23.4px;
 text-align: left;
 color: #0A0E1A;
 }
-@media (max-width:1200px) {
+@media (max-width:1600px) {
     .search h3{
         font-size: 18px;
         
@@ -118,8 +118,8 @@ main{
 }
 
 .main_action h1{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-font-size: 34px;
+   
+font-size: 36px;
 font-weight: 600;
 /* line-height: 38.2px; */
 text-align: center;
@@ -137,14 +137,14 @@ margin-bottom: 50px;
 .main_game{
     display: none;
 }
-.main_action button{
+main button{
     box-shadow: 0px 0px 7px 0px #0000002E;
     background: #3281FF;
     width: 403px;
     height: 50px;
     gap: 0px;
     border-radius: 8px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+   
 font-size: 15px;
 font-weight: 700;
 line-height: 20px;
@@ -157,10 +157,12 @@ transition: .5s;
 .main_action button:active{
 scale: 1.2;
 }
-@media (max-width:1200px){
+@media (max-width:1600px){
  
     main{
-        height: 400px !important;
+        height: auto !important;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 }
 .body_game{
@@ -176,6 +178,7 @@ scale: 1.2;
     justify-content: center;
     align-items: center;
     cursor: pointer ;
+    font-weight: 600;
     border: 1px solid;
     transition: .4s;
     user-select: none;
@@ -185,13 +188,102 @@ scale: 1.2;
 }
 @media(max-width:991px){
     .bukva{
-        width: 50px;
-        height: 50px;
+        width: 72px;
+        height: 72px;
         display: flex;
-        font-size: 20px;
+        font-size: 36px;
         justify-content: center;
         align-items: center;
         border: 1px solid;
         
     }  
+}
+@media(max-width:491px){
+    .bukva{
+        width: 42px;
+        height: 42px;
+        display: flex;
+        font-size: 16px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid;
+        
+    }  
+    main button{
+        width: 250px;
+    }
+}
+
+
+
+
+
+
+.main_game_body{
+    display: none;
+}
+.main_body .img_gl{
+    width: 70%;
+    margin-left: 10%;
+}
+.main_body .img_gl1{
+    width: 80%;
+    margin-left: 10%;
+}
+.main_body .mini_cards{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap: 20px;
+text-align: center;
+}
+.main_body .mini_cards1{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: center;
+    }
+.main_body{
+    max-width: 1400px;
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 4fr 5fr;
+    /* padding-top: 100px; */
+    /* padding-bottom: 100px; */
+}
+.main_body .mini_cards img{
+    width: 100%;
+    
+}
+.main_body .mini_cards1 img{
+    width: 80%;
+    
+}
+.main_test{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    /* margin-right: 5%; */
+
+width: 90%;}
+.main_test1{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 10px;
+    max-width: 900px;
+    margin: auto;
+    margin-top: 30px;
+    /* margin-right: 5%; */
+
+width: 90%;}
+.main_test button{
+    width: 100% ;
+    /* background: #F79A8B; */
+    box-shadow: 0px 2px 4.8px 0px #00000080 inset;
+color: black;
+font-size: 24px;
+height: 57px;
 }

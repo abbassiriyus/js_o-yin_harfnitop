@@ -67,15 +67,15 @@ if(a[randomIndex1]==b ){
     document.querySelectorAll(".bukva")[key].disabled=true
     document.querySelectorAll(".bukva")[key].style="color:green;"
 if(my_select==count_text){
-    stop=true
+    // stop=true
     document.querySelector('.rekord').innerHTML=`ТАЙМЕР: ${time} секунд`
+    taxmin()
 }
 }else{
     if(key!=-1){
         document.querySelectorAll(".bukva")[key].style="color:red;"
         setTimeout(() => {
             document.querySelectorAll(".bukva")[key].style="color:black !important;"
-
             }, 1000)
 }else{
     setTimeout(() => {
