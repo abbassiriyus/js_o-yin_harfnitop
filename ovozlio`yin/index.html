@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./sytle.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+
+</head>
+<body>
+    <img src="./sound/vniz_vlevo_vniz_vparavo_verx_vpravo.wav" alt="">
+    <nav>
+        <img src="./sound/Вниз, влево, вправо.wav" alt="">
+        <div class="timer"><i class='bx bx-time-five'></i> ТАЙМЕР: 30 секунд</div>
+    </nav>
+<header>
+    <div onclick="window.location.reload()" style="cursor: pointer;" class="search">
+        <div class="line"></div>
+      <div class="image_icons"> <img src="./img/Group 419.png" alt="">  </div> 
+      <h3>ПРАВИЛЬНЫЙ МАРШРУТ</h3>
+    </div>
+</header>
+<main>
+    <img src="" alt="">
+   <div class="main_action">
+    <h1>ПРАВИЛЬНЫЙ МАРШРУТ</h1>
+    <p>Слушай инструкцию и следи глазами за маршрутом, не нажимая на клетки. Нажми только на конечную точку маршрута, когда инструкция закончится.</p>
+    <button onclick="start_game()">НАЧАТЬ ТРЕНИРОВКУ</button>
+   </div>
+   <div class="main_game">
+    <img src="" alt="">
+    <div class="title">
+        <select aria-valuemax="Длина пути" name="" id="count">
+<option disabled selected value="3">Длина пути</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+    </select>
+    <select name="" id="speed">
+        <option disabled selected value="2">Скорость прозношения</option>
+        <option value="4">Очень медленно</option>
+        <option value="3">Медленно</option>
+        <option value="2">Средне</option>
+        <option value="1">Быстро</option>
+        <option value="0">Очень быстро</option>
+    </select>
+</div>
+    <div class="body_game">
+
+    </div>
+    <h3 style="margin-top: 30px;" class="rekord"></h3>
+    <button class="game_button" onclick="start_game()">НАЧАТЬ ТРЕНИРОВКУ</button>
+   </div>
+</main>
+<script src="./data.js"></script>
+<script src="./main.js"></script>
+</body>
+</html>
