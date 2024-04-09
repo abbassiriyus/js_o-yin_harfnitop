@@ -4,8 +4,17 @@ var randomIndex1
 var time=-1
 var stop=false
 var count_text=0
+// if(localStorage.getItem("ball6")){
+//     var ball=(JSON.parse(localStorage.getItem('ball6'))).score
+//     }else{
+//     var ball=0
+//     }
+var ball=0
+    // document.querySelector('.rekord1').innerHTML=`Очки: ${ball}`
 var my_select=0
 function taxmin() { 
+    document.querySelector('.button_reset').style="display:none;"
+
     count_text=0
     stop=false
      my_select=0
@@ -45,10 +54,15 @@ setInterval(() => {
     if(time>0 && !stop){
         time=(time-0.1).toFixed(1)
         document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
+//         document.querySelector('.rekord1').innerHTML=`Очки: ${ball}
+// `
     }else{
-    if(time!=-1 && !stop){
-        selectP('',-1)
-    }
+        stop=false
+    document.querySelector('.button_reset').style="display:block;"
+
+    // if(time!=-1 && !stop){
+    //     selectP('',-1)
+    // }
     }
 }, 100);
 
@@ -58,22 +72,37 @@ setInterval(() => {
 
 
 function selectP(b,key){
-    console.log(a[randomIndex1],b);
-    console.log(key);
+   
 if(a[randomIndex1]==b ){
   if(!document.querySelectorAll(".bukva")[key].disabled){
  my_select++
    }
     document.querySelectorAll(".bukva")[key].disabled=true
     document.querySelectorAll(".bukva")[key].style="color:green;"
+  console.log(my_select,count_text);
 if(my_select==count_text){
-    // stop=true
-    document.querySelector('.rekord').innerHTML=`ТАЙМЕР: ${time} секунд`
-    taxmin()
+    stop=true
+    if(localStorage.getItem('ball6')){
+var add1=JSON.parse(localStorage.getItem("ball6"))
+    }else{
+var add1=[]
+    }
+    add1.push({
+        "id":`game${add1.length}`,
+        "score": (ball*1+(time*10)).toFixed(0),
+        "time": time,
+        "now": new Date()
+    })
+    localStorage.setItem("ball6",JSON.stringify(add1))
+    document.querySelector('.button_reset').style="display:block;"
+    // document.querySelector('.main_game').style="display:none;"
+    // document.querySelector('.rekord').innerHTML=`ТАЙМЕР: ${time} секунд`
+    // taxmin()
 }
 }else{
     if(key!=-1){
         document.querySelectorAll(".bukva")[key].style="color:red;"
+        ball--
         setTimeout(() => {
             document.querySelectorAll(".bukva")[key].style="color:black !important;"
             }, 1000)

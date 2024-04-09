@@ -1,9 +1,12 @@
 var key_test=0
 var time=30
 var stop=true
-
+if(localStorage.getItem("ball8")){
+    var ball=localStorage.getItem('ball8')*1
+    }else{
+    var ball=0
+    }
 function start_test() {
-    time=30
     document.querySelector('.main_game_body').innerHTML=""
     if(key_test<data.length){
    document.querySelector('.main_action').style = "display:none"
@@ -157,11 +160,17 @@ setInterval(() => {
 if(!stop){
     document.querySelector(".timer").innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
     time=(time-0.1).toFixed(1)
-    if(time==0){
+    // document.querySelector('.rekord1').innerHTML=`Очки: ${ball}`
+    if(time<0){
+    stop=true
+    ball--
+    document.querySelector('.main_action').style = "display:block"
+    document.querySelector('.main_game_body').style = "display:none" 
     time=30
-    start_test()
+    localStorage.setItem("ball8",ball)
     key_test=0
     }
+    
 }
 }, 100);
 
@@ -169,10 +178,14 @@ function select_button(params) {
     console.log(data.length,key_test);
 if(data[key_test].otver==params){
  document.querySelectorAll('button')[params].style="background:green !important"
+ ball+=2
+ localStorage.setItem("ball8",ball)
 setTimeout(() => {
     key_test++
     start_test()
 }, 1000);
 }else{
+    ball--
+ localStorage.setItem("ball8",ball)
  document.querySelectorAll('button')[params].style="background:#F79A8B !important"
 }}

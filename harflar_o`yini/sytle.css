@@ -169,6 +169,7 @@ scale: 1.2;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     margin-top: 30px;
+    margin-bottom: 30px;
 }
 .bukva{
     width: 70px;

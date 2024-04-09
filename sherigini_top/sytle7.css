@@ -154,6 +154,10 @@ text-align: center;
 color: white;
 transition: .5s;
 }
+main .reset_button{
+    width: 250px;
+    margin-top: 20px;
+}
 .main_action button:active{
 scale: 1.2;
 }

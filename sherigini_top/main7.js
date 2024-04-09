@@ -3,10 +3,16 @@ var new_data=[]
 var randomIndex
 var select=[]
 var time=60
+if(localStorage.getItem("ball7")){
+    var ball=localStorage.getItem('ball7')*1
+    }else{
+    var ball=0
+    }
 var key_selelct=0
 var stop=true
 function render_data() {
     data=[...a]
+    document.querySelector('.reset_button').style="display:none"
     key_selelct=0
     time=60
     stop=false
@@ -26,12 +32,10 @@ for (let i = 0; i < new_data.length; i++) {
 }
 
 function select_tab(params,id,image) {
-
    if(!document.querySelectorAll('.image_game')[params].disabled){
    var sendata={
     params,id,image
    }
-  
     if(select.length==0){
         document.querySelectorAll('.image_game')[params].disabled=true
         document.querySelectorAll('.image_game')[params].style="opacity:1;color:green"
@@ -72,14 +76,25 @@ setInterval(() => {
     if(!stop){
         document.querySelector(".timer").innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
         time=(time-0.1).toFixed(1)
+        document.querySelector('.rekord1').innerHTML=`Очки: ${ball}`
         if(key_selelct==16){
             document.querySelector('.rekord').innerHTML=`ТАЙМЕР: ${time} секунд`
-            render_data()
+            stop=true
+            document.querySelector('.main_action').style="display:block"
+            document.querySelector('.main_game').style="display:none"
+            // render_data()
+        ball+=2
 
+        localStorage.setItem('ball7',ball)
         }
-        if(time==0){
+        if(time<0){
         time=60
-        render_data()
-        }
+        stop=true
+        // render_data()
+        document.querySelector('.main_action').style="display:block"
+        document.querySelector('.main_game').style="display:none"
+        ball--
+        localStorage.setItem('ball7',ball)    
+    }
     }
     }, 100);

@@ -1,7 +1,13 @@
 var position = ["X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "S", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X", "X"]
 var audio
 var time=30
+
+if(localStorage.getItem("ball9")){
+var ball=(JSON.parse(localStorage.getItem('ball9'))).score
+}else{
 var ball=0
+}
+
 var select_music={} 
 var stop=true
 function start_game() {
@@ -20,7 +26,7 @@ var sound_speed = document.querySelector("#speed").value
     document.querySelector('.main_action').style = "display:none"
     document.querySelector('.main_game').style = "display:block"
     for (let i = 0; i < position.length; i++) {
-        document.querySelector('.body_game').innerHTML += ` <div onclick="select_position(${i})" class="bukva">${position[i]}</div>
+        document.querySelector('.body_game').innerHTML += `<div onclick="select_position(${i})" class="bukva">${position[i]}</div>
         `
     }
 }
@@ -30,11 +36,19 @@ function select_position(position) {
 document.querySelectorAll('.bukva')[position].style="color:green"
 document.querySelector(".game_button").style="display:block"
 ball+=2
+localStorage.setItem("ball9",JSON.stringify({
+    "score": ball,
+    "time": time
+}))
 document.querySelector('.rekord').innerHTML=`Очки: ${ball}`
 stop=true
 audio.pause();
    }else{
     ball--
+localStorage.setItem("ball9",JSON.stringify({
+    "score": ball,
+    "time": time
+}))
     document.querySelector('.rekord').innerHTML=`Очки: ${ball}`
     document.querySelectorAll('.bukva')[position].style="color:red"
     setTimeout(() => {
