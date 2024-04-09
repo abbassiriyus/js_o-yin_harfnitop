@@ -1,21 +1,16 @@
 var a
 var qiymat=["Й","Ц","У","К","Е","Н","Г","Ш","Щ","З","Х","Ъ","Ф","Ы","В","А","П","Р","О","Л","Д","Ж","Э","Я","Ч","С","М","И","Т","Ь","Б","Ю"]
 var randomIndex1
-var time=-1
-var stop=false
+var time=15
+var stop=true
 var count_text=0
-// if(localStorage.getItem("ball6")){
-//     var ball=(JSON.parse(localStorage.getItem('ball6'))).score
-//     }else{
-//     var ball=0
-//     }
 var ball=0
-    // document.querySelector('.rekord1').innerHTML=`Очки: ${ball}`
+var start_time=0
 var my_select=0
 function taxmin() { 
-    document.querySelector('.button_reset').style="display:none;"
-
+    // document.querySelector('.button_reset').style="display:none;"
     count_text=0
+start_time=new Date()
     stop=false
      my_select=0
      randomIndex1 = Math.floor(Math.random() * 36);
@@ -40,7 +35,6 @@ count_text++
 } 
 }
 
-console.log(a);
 
 for (let i = 0; i < a.length; i++) {
     document.querySelector(".body_game").innerHTML+=`<div onclick="selectP('${a[i]}',${i})" class="bukva">${a[i]}</div>`
@@ -54,15 +48,17 @@ setInterval(() => {
     if(time>0 && !stop){
         time=(time-0.1).toFixed(1)
         document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
-//         document.querySelector('.rekord1').innerHTML=`Очки: ${ball}
-// `
     }else{
-        stop=false
-    document.querySelector('.button_reset').style="display:block;"
-
-    // if(time!=-1 && !stop){
-    //     selectP('',-1)
-    // }
+    if(time<=0){
+        var add1={
+          "start":start_time,
+            "score": ball,
+            "time": time,
+            "finish": new Date()
+        }
+        localStorage.setItem("game_6",JSON.stringify(add1))
+        window.location="./index7.html"
+    }
     }
 }, 100);
 
@@ -79,25 +75,18 @@ if(a[randomIndex1]==b ){
    }
     document.querySelectorAll(".bukva")[key].disabled=true
     document.querySelectorAll(".bukva")[key].style="color:green;"
-  console.log(my_select,count_text);
+
+  ball+=2
 if(my_select==count_text){
     stop=true
-    if(localStorage.getItem('ball6')){
-var add1=JSON.parse(localStorage.getItem("ball6"))
-    }else{
-var add1=[]
-    }
-    add1.push({
-        "id":`game${add1.length}`,
-        "score": (ball*1+(time*10)).toFixed(0),
+   var add1={
+        "start":start_time,  
+        "score": ball,
         "time": time,
-        "now": new Date()
-    })
-    localStorage.setItem("ball6",JSON.stringify(add1))
-    document.querySelector('.button_reset').style="display:block;"
-    // document.querySelector('.main_game').style="display:none;"
-    // document.querySelector('.rekord').innerHTML=`ТАЙМЕР: ${time} секунд`
-    // taxmin()
+        "finish": new Date()
+    }
+    localStorage.setItem("game_6",JSON.stringify(add1))
+    window.location="./index7.html"
 }
 }else{
     if(key!=-1){

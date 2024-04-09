@@ -12,7 +12,7 @@ var data=[{
     "speed":2,
     "sound":"./sound/vniz_vlevo_vniz_vparavo_verx_vpravo.wav",
     "count":6,
-    "position":18
+    "position":17
 },{
     "speed":2,
     "sound":"./sound/vniz_vlevo_vpravo.wav",

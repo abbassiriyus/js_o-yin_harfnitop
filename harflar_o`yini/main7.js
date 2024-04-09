@@ -3,17 +3,14 @@ var new_data=[]
 var randomIndex
 var select=[]
 var time=60
-if(localStorage.getItem("ball7")){
-    var ball=localStorage.getItem('ball7')*1
-    }else{
-    var ball=0
-    }
+var ball=0
 var key_selelct=0
+var start_time=0
 var stop=true
 function render_data() {
     data=[...a]
-    document.querySelector('.reset_button').style="display:none"
     key_selelct=0
+    start_time=new Date()
     time=60
     stop=false
     document.querySelector('.body_game').innerHTML=""
@@ -26,7 +23,7 @@ function render_data() {
        data.splice(randomIndex,1)
      }
 for (let i = 0; i < new_data.length; i++) {
-    console.log(i);
+   
    document.querySelector('.body_game').innerHTML+=`<div onclick="select_tab(${i},${new_data[i].id},'${new_data[i].image}')" class="bukva"> <img class="image_game" src="${new_data[i].image}" alt=""></div>`
 }
 }
@@ -47,8 +44,10 @@ function select_tab(params,id,image) {
     document.querySelectorAll('.image_game')[params].disabled=true
     document.querySelectorAll('.image_game')[params].style="opacity:1;color:green"
     document.querySelectorAll('.bukva')[params].style="color:green"
+    ball+=2
      select=[]   
      }else{
+        ball--
         document.querySelectorAll('.image_game')[params].style="opacity:1;color:red"
         document.querySelectorAll('.image_game')[select[0].params].style="opacity:1;color:red"
         document.querySelectorAll('.bukva')[params].style="color:red"
@@ -71,30 +70,32 @@ function select_tab(params,id,image) {
 
   
 }
-
+var a12=1
 setInterval(() => {
     if(!stop){
         document.querySelector(".timer").innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
         time=(time-0.1).toFixed(1)
-        document.querySelector('.rekord1').innerHTML=`Очки: ${ball}`
-        if(key_selelct==16){
-            document.querySelector('.rekord').innerHTML=`ТАЙМЕР: ${time} секунд`
-            stop=true
-            document.querySelector('.main_action').style="display:block"
-            document.querySelector('.main_game').style="display:none"
-            // render_data()
-        ball+=2
-
-        localStorage.setItem('ball7',ball)
+        if(key_selelct==16 && a12==1){
+            var add1={
+                "start":start_time,
+                "score": ball,
+                "time": time,
+                "finish": new Date()
+            }
+         
+            localStorage.setItem("game_7",JSON.stringify(add1))
+            window.location="./index8.html"
+         a=2
         }
         if(time<0){
-        time=60
-        stop=true
-        // render_data()
-        document.querySelector('.main_action').style="display:block"
-        document.querySelector('.main_game').style="display:none"
-        ball--
-        localStorage.setItem('ball7',ball)    
+            var add1={
+                "start":start_time,
+                "score": ball,
+                "time": time,
+                "finish": new Date()
+            }
+            localStorage.setItem("game_7",JSON.stringify(add1))
+            window.location="./index8.html"    
     }
     }
     }, 100);

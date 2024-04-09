@@ -1,22 +1,25 @@
 var key_test=0
 var time=30
 var stop=true
-if(localStorage.getItem("ball8")){
-    var ball=localStorage.getItem('ball8')*1
-    }else{
-    var ball=0
-    }
+var start_time=0
+var ball=0
 function start_test() {
+   
     document.querySelector('.main_game_body').innerHTML=""
     if(key_test<data.length){
    document.querySelector('.main_action').style = "display:none"
     document.querySelector('.main_game_body').style = "display:block"
-    stop=false
+    stop=false 
+    start_time=new Date()
     }else{
- document.querySelector('.main_action').style = "display:block"
-        document.querySelector('.main_game_body').style = "display:none"
-        key_test=0
-        stop=true
+        var add1={
+            "start":start_time,
+            "score": ball,
+            "time": time,
+            "finish": new Date()
+        }
+        localStorage.setItem("game_8",JSON.stringify(add1))
+        window.location="./index9.html"
     }
  
     if (data[key_test].image6) {
@@ -162,13 +165,14 @@ if(!stop){
     time=(time-0.1).toFixed(1)
     // document.querySelector('.rekord1').innerHTML=`Очки: ${ball}`
     if(time<0){
-    stop=true
-    ball--
-    document.querySelector('.main_action').style = "display:block"
-    document.querySelector('.main_game_body').style = "display:none" 
-    time=30
-    localStorage.setItem("ball8",ball)
-    key_test=0
+    var add1={
+        "start":start_time,
+        "score": ball,
+        "time": time,
+        "finish": new Date()
+    }
+    localStorage.setItem("game_8",JSON.stringify(add1))
+    window.location="./index8.html"
     }
     
 }
@@ -179,13 +183,11 @@ function select_button(params) {
 if(data[key_test].otver==params){
  document.querySelectorAll('button')[params].style="background:green !important"
  ball+=2
- localStorage.setItem("ball8",ball)
 setTimeout(() => {
     key_test++
     start_test()
 }, 1000);
 }else{
     ball--
- localStorage.setItem("ball8",ball)
  document.querySelectorAll('button')[params].style="background:#F79A8B !important"
 }}
