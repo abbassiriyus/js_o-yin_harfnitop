@@ -124,7 +124,7 @@ select {
  /* убирать подчёркивание у ссылок */
   user-select: none;
  /* убирать выделение текста */
-  background: rgb(212,75,56);
+  background: #3281FF;
  /* фон кнопки */
   padding: .7em 1.5em;
  /* отступ от текста */
@@ -134,10 +134,10 @@ select {
 }
 
 .knopka:hover {
-  background: rgb(232,95,76);
+  background:#457fdd;
 } /* при наведении курсора мышки */
 .knopka:active {
-  background: rgb(152,15,0);
+  background: #3281FF;
 } /* при нажатии */
 
 

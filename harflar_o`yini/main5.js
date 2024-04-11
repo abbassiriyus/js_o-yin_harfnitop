@@ -160,6 +160,7 @@ var Cons = function (xcord, ycord, elem, w, h, src) {
 
 function ready() {
 
+
     $("#gen2").hide();
 
     var tablew;
