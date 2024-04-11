@@ -401,15 +401,14 @@ function ready() {
                             upredm[i].elem.style.border = "1px solid red"
                         }
                     }
-
-                    document.getElementById('user_res_time')
-                        .innerHTML = "Ваш результат: " + cc + " из " + n;
                     document.getElementById('gen')
+                        .style = 'display:none';
+                        document.getElementById('gen2')
                         .style = 'display:none';
                     $("#gen2")
                         .show();
                     state = 2;
-                    setTimeout(() => {
+                
                         var add1={
                               "score": cc,
                               "time": time,
@@ -417,7 +416,7 @@ function ready() {
                           }
                           localStorage.setItem("game_5",JSON.stringify(add1))
                           window.location="./index6.html"
-                    }, 3000);
+                
                 }
             }
 
@@ -448,15 +447,11 @@ document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТА
                         }
                     }
 
-                    document.getElementById('user_res_time')
-                        .innerHTML = "Ваш результат: " + cc + " из " + n;
                     document.getElementById('gen')
                         .style = 'display:none';
-                    $("#gen2")
-                        .show();
-                        
-                    state = 2;
-                    setTimeout(() => {
+                    // $("#gen2")
+                    //     .show();
+                    // state = 2;
                         var add1={
                               "score": cc,
                               "time": time,
@@ -464,7 +459,7 @@ document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТА
                           }
                           localStorage.setItem("game_5",JSON.stringify(add1))
                           window.location="./index6.html"
-                    }, 3000);
+               
                 }
     }
 }, 100);

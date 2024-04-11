@@ -76,16 +76,16 @@ setInterval(() => {
         document.querySelector(".timer").innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
         time=(time-0.1).toFixed(1)
         if(key_selelct==16 && a12==1){
+            a=2 
             var add1={
                 "start":start_time,
                 "score": ball,
                 "time": time,
                 "finish": new Date()
             }
-         
             localStorage.setItem("game_7",JSON.stringify(add1))
             window.location="./index8.html"
-         a=2
+        
         }
         if(time<0){
             var add1={
