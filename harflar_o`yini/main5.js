@@ -259,7 +259,8 @@ function ready() {
         .onclick = function () {		    
             $("#gen2")
                 .hide();
-               
+                document.querySelector('#table').style="display:block  !important;margin-left: auto; display: none;margin-right: auto;"
+                document.querySelector('.main_action').style="display:none"
             var tablex = document.getElementById("table")
                 .getBoundingClientRect()
                 .left;
@@ -321,7 +322,7 @@ function ready() {
                         i = -1;
                         continue;
                     }
-
+                   
                     document.body.appendChild(img);
                     var elem = document.getElementById("s" + (i + 1));
 
@@ -330,13 +331,11 @@ function ready() {
                     elem.style.left = xcord + 'px';
                     elem.style.top = ycord + 'px';
                     predm[i] = new Cons(xcord, ycord, elem, pictsw[i], pictsh[i], picts[i]);
-
                 }
                 $("#gen")
                     .hide();
                 document.getElementById('user_res_time')
                     .innerHTML = "Запомните расположение предметов";
-
                 for (var i = 1; i <= n; i++)
                     $("#s" + i)
                     .animate({

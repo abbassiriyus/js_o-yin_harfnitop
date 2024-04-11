@@ -8,7 +8,10 @@ html, body {
 .main {
   text-align: center;
 }
-
+.main_action{
+  /* background-color: red; */
+  margin: auto;
+}
 .top-text {
   margin: 35px;
   text-align: center;
