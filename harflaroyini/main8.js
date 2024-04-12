@@ -172,7 +172,7 @@ if(!stop){
         "finish": new Date()
     }
     localStorage.setItem("game_8",JSON.stringify(add1))
-    window.location="./index8.html"
+    window.location="./index9.html"
     }
     
 }

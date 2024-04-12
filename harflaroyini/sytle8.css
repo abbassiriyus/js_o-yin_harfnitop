@@ -221,6 +221,7 @@ scale: 1.2;
 
 .main_game_body{
     display: none;
+    max-width: 600px;
 }
 .main_body .img_gl{
     width: 70%;

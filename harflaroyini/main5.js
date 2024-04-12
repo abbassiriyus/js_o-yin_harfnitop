@@ -405,9 +405,9 @@ function ready() {
                         .style = 'display:none';
                         document.getElementById('gen2')
                         .style = 'display:none';
-                    $("#gen2")
-                        .show();
-                    state = 2;
+                    // $("#gen2")
+                        // .show();
+                    // state = 2;
                 
                         var add1={
                               "score": cc,
@@ -415,7 +415,10 @@ function ready() {
                               "finish": new Date()
                           }
                           localStorage.setItem("game_5",JSON.stringify(add1))
-                          window.location="./index6.html"
+                          setTimeout(() => {
+                               window.location="./index6.html" 
+                          }, 1000);
+                      
                 
                 }
             }
@@ -458,7 +461,10 @@ document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТА
                               "finish": new Date()
                           }
                           localStorage.setItem("game_5",JSON.stringify(add1))
-                          window.location="./index6.html"
+                          setTimeout(() => {
+                            window.location="./index6.html"
+                          }, 1000);
+                          
                
                 }
     }

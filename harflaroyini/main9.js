@@ -44,9 +44,12 @@ function start_game() {
       randomIndex1 = Math.floor(Math.random() * sound.length);
      select_music = sound[randomIndex1]
     var soundUrl = decodeURIComponent(select_music.sound)
+    document.querySelector(".ee").innerHTML="Слушайте аудио . . ."
      audio = new Audio(soundUrl)
     audio.play()
-   
+    audio.addEventListener("ended", function() {
+        document.querySelector(".ee").innerHTML = "Установите окончательный маршрут";
+      });
     for (let i = 0; i < position.length; i++) {
         document.querySelector('.body_game').innerHTML += `<div onclick="select_position(${i})" class="bukva">${position[i]}</div>
         `
