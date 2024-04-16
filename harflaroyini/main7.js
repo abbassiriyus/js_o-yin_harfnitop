@@ -62,7 +62,7 @@ function select_tab(params,id,image) {
         document.querySelectorAll('.bukva')[select[0].params].style="color:black"
         document.querySelectorAll('.bukva')[params].style="color:black" 
          select=[]         
-    }, 100);
+    }, 1000);
     
      }
     } 

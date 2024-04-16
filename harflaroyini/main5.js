@@ -243,17 +243,17 @@ function ready() {
     }
 
 
-    document.getElementById('gen2')
-        .onclick = function () {
+    // document.getElementById('gen2')
+    //     .onclick = function () {
 
-            for (var i = 1; i <= n; i++)
-                $("#s" + i)
-                .animate({
-                    opacity: '0.49'
-                }, delta_time);
-            $("#gen2")
-                .hide();
-        }
+    //         for (var i = 1; i <= n; i++)
+    //             $("#s" + i)
+    //             .animate({
+    //                 opacity: '0.49'
+    //             }, delta_time);
+    //         $("#gen2")
+    //             .hide();
+    //     }
 
 
     document.getElementById('gen')
@@ -375,11 +375,11 @@ function ready() {
                              img.addEventListener('touchstart',handler0m,false);
                                 
                         }
-                        document.getElementById('gen')
-                            .innerHTML = 'Готово!';
+                        // document.getElementById('gen')
+                            // .innerHTML = 'Готово!';
                             stop=false
-                        $("#gen")
-                            .show();
+                        // $("#gen")
+                            // .show();
                         state = 1;
 
                     });

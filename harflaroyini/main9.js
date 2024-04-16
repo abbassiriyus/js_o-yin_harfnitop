@@ -85,11 +85,32 @@ setTimeout(() => {
        }
 }, 1000);
    }else{
-    ball--
-    document.querySelectorAll('.bukva')[position].style="color:red"
+     document.querySelectorAll('.bukva')[position].style="color:red"
     setTimeout(() => {
     document.querySelectorAll('.bukva')[position].style="color:black"
     }, 1000);
+    ball--
+    audio.pause();
+    if(sound_count<10){ 
+        sound_count++
+        start_game()
+       }else{
+           sound_count=3
+        if(sound_speed>0){
+           sound_speed--
+           start_game()
+       }else{
+        var add1={
+                   "score": ball,
+                   "time": time,
+                   "finish": new Date()
+               }
+               localStorage.setItem("game_9",JSON.stringify(add1))
+               stop=true
+               alert("Game Over")
+           }
+       }
+   
    }
 
 

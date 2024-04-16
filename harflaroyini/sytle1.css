@@ -185,8 +185,8 @@ scale: 1.2;
     margin-bottom: 30px;
 }
 .bukva{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     display: flex;
     font-size: 30px;
     justify-content: center;
@@ -202,10 +202,10 @@ scale: 1.2;
 }
 @media(max-width:991px){
     .bukva{
-        width: 72px;
-        height: 72px;
+        width: 40px;
+        height: 40px;
         display: flex;
-        font-size: 36px;
+        font-size: 16px;
         justify-content: center;
         align-items: center;
         border: 1px solid;

@@ -50,6 +50,15 @@ align-items: center;
 background: #F7F7F7;
 
 }
+@media(max-width:1300px){
+    header{
+        height: 50px;
+    display: flex;
+    align-items: center;
+    background: #F7F7F7;
+    
+    }
+}
 .search{
     display: flex;
     gap: 30px;
@@ -161,7 +170,7 @@ scale: 1.2;
  
     main{
         height: auto !important;
-        padding-top: 30px;
+        padding-top: 10px;
         padding-bottom: 30px;
     }
 }
