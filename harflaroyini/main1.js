@@ -17,7 +17,6 @@ start_time=new Date()
     document.querySelector('.main_action').style="display:none;"
     document.querySelector('.main_game').style="display:block;"
     document.querySelector(".body_game").innerHTML=""
-    time=60
     a=[]
     for (let i = 0; i < 40; i++) {
      var randomIndex = Math.floor(Math.random() * qiymat.length);
@@ -74,26 +73,27 @@ if(a[randomIndex1]==b ){
  my_select++
    }
     document.querySelectorAll(".bukva")[key].disabled=true
-    document.querySelectorAll(".bukva")[key].style="color:green;"
+    document.querySelectorAll(".bukva")[key].style="background:green;"
 
   ball+=2
 if(my_select==count_text){
-    stop=true
-   var add1={
-        "start":start_time,  
-        "score": ball,
-        "time": time,
-        "finish": new Date()
-    }
-    localStorage.setItem("game_1",JSON.stringify(add1))
-    window.location="./index5.html"
+//     stop=true
+//    var add1={
+//         "start":start_time,  
+//         "score": ball,
+//         "time": time,
+//         "finish": new Date()
+//     }
+//     localStorage.setItem("game_1",JSON.stringify(add1))
+//     window.location="./index5.html"
+taxmin()
 }
 }else{
     if(key!=-1){
-        document.querySelectorAll(".bukva")[key].style="color:red;"
+        document.querySelectorAll(".bukva")[key].style="background:red;"
         ball--
         setTimeout(() => {
-            document.querySelectorAll(".bukva")[key].style="color:black !important;"
+            document.querySelectorAll(".bukva")[key].style="background:white !important;"
             }, 1000)
 }else{
     setTimeout(() => {
