@@ -9,8 +9,11 @@ html, body {
   text-align: center;
 }
 .main_action{
+
   /* background-color: red; */
   margin: auto;
+  /* min-height: 40vh; */
+margin-top: 150px;
 }
 .top-text {
   margin: 35px;

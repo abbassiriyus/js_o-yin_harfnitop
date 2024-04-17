@@ -7,14 +7,15 @@ font-family: "Open Sans", sans-serif;
 /* navbar */
 nav{
     background: #3281FF;
+    /* width: 320px; */
 }
 .timer{
     max-width: 500px;
     margin: auto;
-    margin-right: 40px;
+    /* margin-right: 40px; */
   text-align: end;
 height: 100px;
-justify-content: end;
+justify-content: center;
 display: flex;
 align-items: center;
 color: white;
@@ -124,6 +125,7 @@ main{
     width: 90%;
     max-width: 800px;
     text-align: center;
+    /* margin-top: 150px; */
 }
 
 .main_action h1{
@@ -181,10 +183,10 @@ scale: 1.2;
     margin-bottom: 30px;
 }
 .bukva{
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     display: flex;
-    font-size: 30px;
+    font-size: 20px;
     justify-content: center;
     align-items: center;
     cursor: pointer ;
@@ -198,10 +200,10 @@ scale: 1.2;
 }
 @media(max-width:991px){
     .bukva{
-        width: 72px;
-        height: 72px;
+        width: 52px;
+        height: 52px;
         display: flex;
-        font-size: 36px;
+        font-size: 26px;
         justify-content: center;
         align-items: center;
         border: 1px solid;

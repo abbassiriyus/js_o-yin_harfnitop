@@ -1,8 +1,8 @@
 
 
 var n = 7;
-var pause_time = 5000;
-var delta_time = 100;
+var pause_time = 10000;
+var delta_time = 1000;
 var stop=true
 var picts9 = ['./imgp9/1.png', './imgp9/2.png', './imgp9/3.png', './imgp9/4.png', './imgp9/5.png', './imgp9/6.png', './imgp9/7.png', './imgp9/8.png', './imgp9/9.png', './imgp9/10.png', './imgp9/11.png', './imgp9/12.png', './imgp9/13.png', './imgp9/14.png', './imgp9/15.png', './imgp9/16.png', './imgp9/17.png', './imgp9/18.png', './imgp9/19.png'];
 var picts4 = ['./imgp4/1.png', './imgp4/2.png', './imgp4/3.png', './imgp4/4.png', './imgp4/5.png', './imgp4/6.png', './imgp4/7.png', './imgp4/8.png', './imgp4/9.png', './imgp4/10.png', './imgp4/11.png', './imgp4/12.png', './imgp4/13.png', './imgp4/14.png', './imgp4/15.png', './imgp4/16.png', './imgp4/17.png', './imgp4/18.png', './imgp4/19.png'];
@@ -159,7 +159,7 @@ var Cons = function (xcord, ycord, elem, w, h, src) {
 
 
 function ready() {
-
+ 
 
     $("#gen2").hide();
 
@@ -322,8 +322,20 @@ function ready() {
                 }
                 $("#gen")
                     .hide();
+                  
                 document.getElementById('user_res_time')
                     .innerHTML = "Запомните расположение предметов";
+                    time2=10 
+                    stop2=true
+                    setInterval(() => {
+                        console.log(time2,stop2);
+                        if(stop2 && time2>0){
+                            time2=(time2-0.1).toFixed(1)
+                    document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time2} секунд`
+                        }else{
+                       stop2=false
+                        }
+                    }, 100);
                 for (var i = 1; i <= n; i++)
                     $("#s" + i)
                     .animate({
@@ -459,4 +471,5 @@ document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТА
 
 
 document.addEventListener("DOMContentLoaded", ready);
+
 

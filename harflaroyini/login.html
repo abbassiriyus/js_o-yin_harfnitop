@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar">
+<div class="logo">
+<img src="./img/Group 58.png" alt="logo">
+<h3>Мозг</h3>
+</div>
+<div></div>
+    
+<div></div>
+<div></div>
+
+</nav>
+
+<header>
+    <div class="register">
+    <h3>Давайте войдем в систему</h3><br>
+    <p>У вас нет учетной записи?<a href=""> Зарегистрироваться</a></p>
+<br><br>
+
+<div class="input">
+    <i class='bx bx-envelope'></i>
+    <input type="text" id="email" placeholder="E-mail" >
+</div>
+<div class="input">
+    <i class='bx bx-lock-alt' ></i>
+    <input type="text" id="password" placeholder="Пароль" >
+</div>
+
+
+
+<div class="checkbox">
+<input style="position: relative;top: 5px;" type="checkbox">
+<h5>Запомнить меня</h5>
+</div>
+<button onclick="login()" class="register_button">Войти</button>
+<div class="ili"><div class="line"></div>ИЛИ<div class="line"></div></div>
+<button class="google-btn">
+    <img src="./img/Logo Google.png" alt="Google logo">
+    Sign in with Google
+    <div></div>
+  <div></div>
+  
+</button>
+<button class="google-btn">
+    <img src="./img/Logo Google (1).png" alt="Google logo">
+    Войти через ВК
+    <div></div>
+  <div></div>
+  
+</button>
+
+</div>
+</header>
+
+<script>
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+
+function login() {
+  const email = emailInput.value;
+  const password = passwordInput.value;
+  try {
+    fetch('https://backent-admin-oyin-html-css.onrender.com/auth/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ email, password })
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log('Login successful');
+        // Do something else, like redirect the user or display a success message
+      } else {
+        console.error('Login failed');
+        // Handle the error, like displaying an error message
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      // Handle any network or server errors
+    });
+  } catch (error) {
+    console.error('Error:', error);
+    // Handle any unexpected errors
+  }
+}
+</script>
+
+</body>
+</html>

@@ -7,14 +7,16 @@ font-family: "Open Sans", sans-serif;
 /* navbar */
 nav{
     background: #3281FF;
+    /* width: 320px; */
 }
+
 .timer{
     max-width: 500px;
     margin: auto;
-    margin-right: 40px;
+    /* margin-right: 40px; */
   text-align: end;
 height: 100px;
-justify-content: end;
+justify-content: center;
 display: flex;
 align-items: center;
 color: white;
