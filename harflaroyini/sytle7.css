@@ -8,7 +8,11 @@ font-family: "Open Sans", sans-serif;
     top: 0px;
     left: 0px;
     width: 100vw;
+    background-color: rgba(0, 0, 0, 0);
     height: 100vh;
+    display: none;
+    opacity: 0;
+    z-index: 32;
 }
 /* navbar */
 nav{

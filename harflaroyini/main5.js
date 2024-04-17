@@ -69,7 +69,6 @@ function copyk(a, b, k) {
 }
 
 
-
 function getCoords(elem) {
     var box = elem.getBoundingClientRect();
 
@@ -242,18 +241,6 @@ function ready() {
         
     }
 
-
-    // document.getElementById('gen2')
-    //     .onclick = function () {
-
-    //         for (var i = 1; i <= n; i++)
-    //             $("#s" + i)
-    //             .animate({
-    //                 opacity: '0.49'
-    //             }, delta_time);
-    //         $("#gen2")
-    //             .hide();
-    //     }
 
 
     document.getElementById('gen')

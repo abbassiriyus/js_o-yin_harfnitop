@@ -46,15 +46,19 @@ function select_tab(params,id,image) {
     document.querySelectorAll('.bukva')[params].style="color:green"
     ball+=2
      select=[]   
-     }else{
+     }else{ 
+        document.querySelector('.head_action').style="display:block"
+        console.log("Ss");
         ball--
         document.querySelectorAll('.image_game')[params].style="opacity:1;color:red"
         document.querySelectorAll('.image_game')[select[0].params].style="opacity:1;color:red"
         document.querySelectorAll('.bukva')[params].style="color:red"
         document.querySelectorAll('.bukva')[select[0].params].style="color:red"
+       
         document.querySelectorAll('.image_game')[select[0].params].disabled=true
          document.querySelectorAll('.image_game')[params].disabled=true
      setTimeout(() => {
+        document.querySelector('.head_action').style="display:none"
         document.querySelectorAll('.image_game')[select[0].params].disabled=false
         document.querySelectorAll('.image_game')[params].disabled=false
         document.querySelectorAll('.image_game')[select[0].params].style="opacity:0;color:black"
