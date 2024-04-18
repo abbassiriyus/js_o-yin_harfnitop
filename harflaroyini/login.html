@@ -23,16 +23,18 @@
 <header>
     <div class="register">
     <h3>Давайте войдем в систему</h3><br>
-    <p>У вас нет учетной записи?<a href=""> Зарегистрироваться</a></p>
+    <p>У вас нет учетной записи?<a style="margin-left: 10px;"  href="./index.html"> Зарегистрироваться</a></p>
 <br><br>
 
 <div class="input">
     <i class='bx bx-envelope'></i>
     <input type="text" id="email" placeholder="E-mail" >
+    <p>Неверный почта</p>
 </div>
 <div class="input">
     <i class='bx bx-lock-alt' ></i>
-    <input type="text" id="password" placeholder="Пароль" >
+    <input type="password" id="password" placeholder="Пароль" >
+    <p>Неверный пароль</p>
 </div>
 
 
@@ -70,7 +72,7 @@ function login() {
   const email = emailInput.value;
   const password = passwordInput.value;
   try {
-    fetch('https://backent-admin-oyin-html-css.onrender.com/auth/login', {
+    fetch('http://localhost:4005/auth/v1/login',{
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -80,18 +82,46 @@ function login() {
     .then(response => {
       if (response.ok) {
         console.log('Login successful');
-        // Do something else, like redirect the user or display a success message
+return response.json()
       } else {
-        console.error('Login failed');
-        // Handle the error, like displaying an error message
+        document.querySelectorAll('header .input p')[1].style="display:block"
+document.querySelectorAll('header .input')[1].style="border-bottom: 1px solid rgba(255, 0, 0, 0.736);"
+document.querySelectorAll('header .input p')[0].style="display:block"
+document.querySelectorAll('header .input')[0].style="border-bottom: 1px solid rgba(255, 0, 0, 0.736);"
+setTimeout(() => {
+  document.querySelectorAll('header .input p')[1].style="display:none"
+document.querySelectorAll('header .input')[1].style="border-bottom: 1px solid grey;"
+document.querySelectorAll('header .input p')[0].style="display:none"
+document.querySelectorAll('header .input')[0].style="border-bottom: 1px solid grey;"
+}, 2000);
       }
+    }).then(data=>{
+      localStorage.setItem('user', JSON.stringify(data));
+      window.location="/profile.html"
     })
     .catch(error => {
-      console.error('Error:', error);
-      // Handle any network or server errors
+      document.querySelectorAll('header .input p')[1].style="display:block"
+document.querySelectorAll('header .input')[1].style="border-bottom: 1px solid rgba(255, 0, 0, 0.736);"
+document.querySelectorAll('header .input p')[0].style="display:block"
+document.querySelectorAll('header .input')[0].style="border-bottom: 1px solid rgba(255, 0, 0, 0.736);"
+console.log("asdasd2");
+
+setTimeout(() => {
+  console.log("asdasd3");
+
+  document.querySelectorAll('header .input p')[1].style="display:none"
+document.querySelectorAll('header .input')[1].style="border-bottom: 1px grey;"
+document.querySelectorAll('header .input p')[0].style="display:none"
+document.querySelectorAll('header .input')[0].style="border-bottom: 1px grey;"
+}, 2000);
+      
     });
   } catch (error) {
-    console.error('Error:', error);
+    console.log("asdasd1");
+      document.querySelectorAll('header .input p')[1].style="display:block"
+document.querySelectorAll('header .input')[1].style="border-bottom: 1px solid rgba(255, 0, 0, 0.736);"
+document.querySelectorAll('header .input p')[0].style="display:block"
+document.querySelectorAll('header .input')[0].style="border-bottom: 1px solid rgba(255, 0, 0, 0.736);"
     // Handle any unexpected errors
   }
 }
