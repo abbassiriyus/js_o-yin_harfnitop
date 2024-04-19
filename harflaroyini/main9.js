@@ -145,3 +145,18 @@ setInterval(() => {
     }
     }, 100);
 
+function game_Over(){
+    var game_1=localStorage.getItem("game_1")
+    var game_2=localStorage.getItem("game_2")
+    var game_3=localStorage.getItem("game_3")
+    var game_4=localStorage.getItem("game_4")
+    var game_5=localStorage.getItem("game_5")
+    var game_6=localStorage.getItem("game_6")
+    var game_7=localStorage.getItem("game_7")
+    var game_8=localStorage.getItem("game_8")
+    var game_9=localStorage.getItem("game_9")
+    if(game_1){
+        
+    }
+
+}

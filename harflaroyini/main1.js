@@ -39,10 +39,7 @@ for (let i = 0; i < a.length; i++) {
     document.querySelector(".body_game").innerHTML+=`<div onclick="selectP('${a[i]}',${i})" class="bukva">${a[i]}</div>`
 }
 document.querySelector('.title').innerHTML=a[randomIndex1]
-
 }
-
-
 setInterval(() => {
     if(time>0 && !stop){
         time=(time-0.1).toFixed(1)
@@ -56,7 +53,7 @@ setInterval(() => {
             "finish": new Date()
         }
         localStorage.setItem("game_1",JSON.stringify(add1))
-        window.location="./index5.html"
+        window.location="./game2.html"
     }
     }
 }, 100);

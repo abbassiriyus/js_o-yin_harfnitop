@@ -95,10 +95,10 @@ document.querySelector('.fio').value=data.fullname
 document.querySelector('.fio2').value=data.year
 document.querySelector('.profile_page h3').innerHTML=data.fullname
 document.querySelector('.profile_page p').innerHTML=data.email
-
+console.log(data);
 if(data.image){
-    document.querySelector('.profile_page img').value=data.image   
-    document.querySelector('.inputFile .image #imagePreview').value=data.image   
+    document.querySelector('.profile_page img').src=data.image   
+    document.querySelector('.inputFile .image #imagePreview').src=data.image   
 }
 
 if(data.sinf){
@@ -120,14 +120,10 @@ function Start_Game() {
         var data1=new FormData()
         data1.append("email","weba@gmail.com")
         data1.append("fullname",document.querySelector('.fio').value)
-        if(document.querySelector('#fileInput').files[0]){
          data1.append("image",document.querySelector('#fileInput').files[0])
-        }else{
-         data1.append("image",data.image)   
-        }
         data1.append("sinf",document.querySelector('select').value)
         data1.append("year",document.querySelector('.fio2').value)
-        fetch(`http://localhost:4005/auth/v1/users/${data.id}`, {
+        fetch(`https://backent-admin-oyin-html-css.onrender.com/auth/v1/users/${data.id}`, {
   method: 'PUT',
   body: data1
 })
