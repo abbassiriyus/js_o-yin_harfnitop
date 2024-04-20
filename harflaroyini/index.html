@@ -6,7 +6,6 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
 
 </head>
 <body>
@@ -72,6 +71,7 @@
 
 </div>
 </header>
+
 <script>
     const emailInput = document.getElementById('email');
     const passwordInput = document.getElementById('password');
@@ -85,7 +85,7 @@ function register() {
   const fullname= fullnameInput.value
   try {
 if(password.length>7 && password==passwordInput1.value && email.includes('@') && fullname.length>4 && doctup.checked){
-    fetch('https://backent-admin-oyin-html-css.onrender.com/auth/v1/users', {
+    fetch('https://api.abbas.uz/auth/v1/users', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'
@@ -145,21 +145,7 @@ setTimeout(() => {
   }
 }
 </script>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<script src="https://accounts.google.com/gsi/client" async defer></script>
-<script>
-  window.onload = function () {
-    google.accounts.id.initialize({
-      client_id: '809516182164-1l0qcol9kch4mofni4pi0emedg8co5pd.apps.googleusercontent.com',
-      callback: handleCredentialResponse
-    });
-    google.accounts.id.prompt();
-  };
-  function handleCredentialResponse(params) {
-    console.log(params);
-  }
-</script>
+
 
 </body>
 </html>

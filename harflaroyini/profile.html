@@ -123,7 +123,7 @@ function Start_Game() {
          data1.append("image",document.querySelector('#fileInput').files[0])
         data1.append("sinf",document.querySelector('select').value)
         data1.append("year",document.querySelector('.fio2').value)
-        fetch(`https://backent-admin-oyin-html-css.onrender.com/auth/v1/users/${data.id}`, {
+        fetch(`https://api.abbas.uz/auth/v1/users/${data.id}`, {
   method: 'PUT',
   body: data1
 })
