@@ -36,7 +36,8 @@ function start_game() {
                 "finish": new Date()
             }
             localStorage.setItem("game_9",JSON.stringify(add1))
-            alert("Game Over")
+         document.querySelector(".win_game").style="display:flex"
+         game_Over()
             stop=true
         }
     }
@@ -80,7 +81,9 @@ setTimeout(() => {
                }
                localStorage.setItem("game_9",JSON.stringify(add1))
                stop=true
-               alert("Game Over")
+               document.querySelector(".win_game").style="display:flex"
+               game_Over()
+
            }
        }
 }, 1000);
@@ -107,7 +110,9 @@ setTimeout(() => {
                }
                localStorage.setItem("game_9",JSON.stringify(add1))
                stop=true
-               alert("Game Over")
+               document.querySelector(".win_game").style="display:flex"
+               game_Over()
+
            }
        }
    
@@ -138,7 +143,9 @@ setInterval(() => {
                            "finish": new Date()
                        }
                        localStorage.setItem("game_9",JSON.stringify(add1))
-                       alert("Game Over")
+                       document.querySelector(".win_game").style="display:flex"
+                       game_Over()
+
                    }
                }
         }
@@ -146,6 +153,8 @@ setInterval(() => {
     }, 100);
 
 function game_Over(){
+    var user=JSON.parse(localStorage.getItem("user"))
+    console.log(user,"user");
     var game_1=localStorage.getItem("game_1")
     var game_2=localStorage.getItem("game_2")
     var game_3=localStorage.getItem("game_3")
@@ -156,7 +165,137 @@ function game_Over(){
     var game_8=localStorage.getItem("game_8")
     var game_9=localStorage.getItem("game_9")
     if(game_1){
-        
+     var data1=new FormData()
+     data1.append("result",(JSON.parse(game_1)).score)
+     data1.append("time", 60)
+     data1.append("game_number", 1)
+     data1.append("game_title",'Корректурная проба')
+     data1.append("user_id",user.id) 
+          fetch('https://api.abbas.uz/api/v1/game_user/', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data1)
+          })
+          .then(response => response.json())
+          .then(data => {
+            console.log('Success:', data);
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
     }
-
+    if(game_5){
+        var data1=new FormData()
+        data1.append("result",(JSON.parse(game_5)).score)
+        data1.append("time", 10)
+        data1.append("game_number", 5)
+        data1.append("game_title",'Расставь предметы')
+        data1.append("user_id", user.id)
+             fetch('https://api.abbas.uz/api/v1/game_user/', {
+               method: 'POST',
+               headers: {
+                 'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(data1)
+             })
+             .then(response => response.json())
+             .then(data => {
+               console.log('Success:', data);
+             })
+             .catch((error) => {
+               console.error('Error:', error);
+             });
+       }
+    if(game_6){
+        var data1=new FormData()
+        data1.append("result",(JSON.parse(game_6)).score)
+        data1.append("time", 15-(JSON.parse(game_6)).time)
+        data1.append("game_number", 6)
+        data1.append("game_title",'Поиск букв')
+        data1.append("user_id", user.id)
+      
+             fetch('https://api.abbas.uz/api/v1/game_user/', {
+               method: 'POST',
+               headers: {
+                 'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(data1)
+             })
+             .then(response => response.json())
+             .then(data => {
+               console.log('Success:', data);
+             })
+             .catch((error) => {
+               console.error('Error:', error);
+             });
+       }
+    if(game_7){
+        var data1=new FormData()
+        data1.append("result",(JSON.parse(game_7)).score)
+        data1.append("time", 60-(JSON.parse(game_7)).time)
+        data1.append("game_number", 1)
+        data1.append("game_title",'Пары по картинкам')
+        data1.append("user_id", user.id)
+        fetch('https://api.abbas.uz/api/v1/game_user/', {
+               method: 'POST',
+               headers: {
+                 'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(data1)
+             })
+             .then(response => response.json())
+             .then(data => {
+               console.log('Success:', data);
+             })
+             .catch((error) => {
+               console.error('Error:', error);
+             });
+       }
+  
+       if(game_8){
+        var data1=new FormData()
+        data1.append("result",(JSON.parse(game_8)).score)
+        data1.append("time", 30-(JSON.parse(game_8)).time)
+        data1.append("game_number", 1)
+        data1.append("game_title",'Выбери вид сверху')
+        data1.append("user_id", user.id)
+        fetch('https://api.abbas.uz/api/v1/game_user/', {
+               method: 'POST',
+               headers: {
+                 'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(data1)
+             })
+             .then(response => response.json())
+             .then(data => {
+               console.log('Success:', data);
+             })
+             .catch((error) => {
+               console.error('Error:', error);
+             });
+       }
+       if(game_9){
+        var data1=new FormData()
+        data1.append("result",(JSON.parse(game_9)).score)
+        data1.append("time", 60)
+        data1.append("game_number", 1)
+        data1.append("game_title",'Правильный маршрут')
+        data1.append("user_id", user.id)
+        fetch('https://api.abbas.uz/api/v1/game_user/', {
+               method: 'POST',
+               headers: {
+                 'Content-Type': 'application/json'
+               },
+               body: JSON.stringify(data1)
+             })
+             .then(response => response.json())
+             .then(data => {
+               console.log('Success:', data);
+             })
+             .catch((error) => {
+               console.error('Error:', error);
+             });
+       }
 }
