@@ -176,7 +176,7 @@ function game_Over(){
             headers: {
               'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data1)
+            body: data1
           })
           .then(response => response.json())
           .then(data => {
@@ -195,10 +195,7 @@ function game_Over(){
         data1.append("user_id", user.id)
              fetch('https://api.abbas.uz/api/v1/game_user/', {
                method: 'POST',
-               headers: {
-                 'Content-Type': 'application/json'
-               },
-               body: JSON.stringify(data1)
+               body: data1
              })
              .then(response => response.json())
              .then(data => {
@@ -218,10 +215,7 @@ function game_Over(){
       
              fetch('https://api.abbas.uz/api/v1/game_user/', {
                method: 'POST',
-               headers: {
-                 'Content-Type': 'application/json'
-               },
-               body: JSON.stringify(data1)
+               body: data1
              })
              .then(response => response.json())
              .then(data => {
@@ -235,15 +229,12 @@ function game_Over(){
         var data1=new FormData()
         data1.append("result",(JSON.parse(game_7)).score)
         data1.append("time", 60-(JSON.parse(game_7)).time)
-        data1.append("game_number", 1)
+        data1.append("game_number", 7)
         data1.append("game_title",'Пары по картинкам')
         data1.append("user_id", user.id)
         fetch('https://api.abbas.uz/api/v1/game_user/', {
                method: 'POST',
-               headers: {
-                 'Content-Type': 'application/json'
-               },
-               body: JSON.stringify(data1)
+               body: data1
              })
              .then(response => response.json())
              .then(data => {
@@ -258,15 +249,12 @@ function game_Over(){
         var data1=new FormData()
         data1.append("result",(JSON.parse(game_8)).score)
         data1.append("time", 30-(JSON.parse(game_8)).time)
-        data1.append("game_number", 1)
+        data1.append("game_number", 8)
         data1.append("game_title",'Выбери вид сверху')
         data1.append("user_id", user.id)
         fetch('https://api.abbas.uz/api/v1/game_user/', {
                method: 'POST',
-               headers: {
-                 'Content-Type': 'application/json'
-               },
-               body: JSON.stringify(data1)
+               body: data1
              })
              .then(response => response.json())
              .then(data => {
@@ -280,15 +268,12 @@ function game_Over(){
         var data1=new FormData()
         data1.append("result",(JSON.parse(game_9)).score)
         data1.append("time", 60)
-        data1.append("game_number", 1)
+        data1.append("game_number", 9)
         data1.append("game_title",'Правильный маршрут')
         data1.append("user_id", user.id)
         fetch('https://api.abbas.uz/api/v1/game_user/', {
                method: 'POST',
-               headers: {
-                 'Content-Type': 'application/json'
-               },
-               body: JSON.stringify(data1)
+               body: data1
              })
              .then(response => response.json())
              .then(data => {
