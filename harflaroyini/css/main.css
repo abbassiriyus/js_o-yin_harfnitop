@@ -118,7 +118,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .game-field3 {
-  padding: 64px 324px;
+  /* padding: 64px 324px; */
   margin: 0 auto;
   max-width: 1092px;
   background: #fff;
@@ -224,10 +224,10 @@ table {
 }
 
 .game td {
-  padding: 20px;
+  padding: 10px;
   border: 2px solid black;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 23px;
   line-height: 130%;
   text-transform: uppercase;
   color: #0a0e1a;
