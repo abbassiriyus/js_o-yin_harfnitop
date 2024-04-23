@@ -87,7 +87,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .game-title {
   margin: 0 auto;
-  max-width: 1092px;
+  /* max-width: 1092px; */
   background: #f7f7f7;
   height: 98px;
   display: flex;
@@ -103,6 +103,7 @@ h1, h2, h3, h4, h5, h6 {
 .icon-search {
   margin-right: 25px;
   width: 40px;
+  margin-left: 10px;
   height: 40px;
 }
 
