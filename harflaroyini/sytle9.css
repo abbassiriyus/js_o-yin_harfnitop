@@ -3,7 +3,11 @@
 margin: 0;
 font-family: "Open Sans", sans-serif;
 }
-
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
 /* navbar */
 nav{
     background: #3281FF;
@@ -280,12 +284,13 @@ font-size: 23px;
 }
 
 .win_game .backgr{
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     background: url("./img/2979686\ 1.png");
     background-size: cover;
-    position: absolute;
+    position: fixed;
     top: 0px;
     left: 0px;
+    overflow: hidden;
     
 }

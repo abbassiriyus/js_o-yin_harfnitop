@@ -72,7 +72,9 @@ setTimeout(() => {
            sound_count=3
         if(sound_speed>0){
            sound_speed--
-           start_game()
+           setTimeout(() => {
+            start_game()
+           }, 1000);
        }else{
         var add1={
                    "score": ball,
@@ -91,7 +93,6 @@ setTimeout(() => {
      document.querySelectorAll('.bukva')[position].style="color:red"
     setTimeout(() => {
     document.querySelectorAll('.bukva')[position].style="color:black"
-    }, 1000);
     ball--
     audio.pause();
     if(sound_count<10){ 
@@ -114,7 +115,8 @@ setTimeout(() => {
                game_Over()
 
            }
-       }
+       }  }, 1000);
+  
    
    }
 
@@ -186,6 +188,63 @@ function game_Over(){
             console.error('Error:', error);
           });
     }
+    if(game_2){
+      var data1=new FormData()
+      data1.append("result",(JSON.parse(game_2)).score)
+      data1.append("time", (JSON.parse(game_2)).time)
+      data1.append("game_number", 2)
+      data1.append("game_title",'Выбери подходящее выражение')
+      data1.append("user_id", user.id)
+           fetch('https://api.abbas.uz/api/v1/game_user/', {
+             method: 'POST',
+             body: data1
+           })
+           .then(response => response.json())
+           .then(data => {
+             console.log('Success:', data);
+           })
+           .catch((error) => {
+             console.error('Error:', error);
+           });
+     }
+     if(game_3){
+      var data1=new FormData()
+      data1.append("result",(JSON.parse(game_3)).score)
+      data1.append("time", 30)
+      data1.append("game_number", 3)
+      data1.append("game_title",'Таблица Шульте')
+      data1.append("user_id", user.id)
+           fetch('https://api.abbas.uz/api/v1/game_user/', {
+             method: 'POST',
+             body: data1
+           })
+           .then(response => response.json())
+           .then(data => {
+             console.log('Success:', data);
+           })
+           .catch((error) => {
+             console.error('Error:', error);
+           });
+     }
+     if(game_4){
+      var data1=new FormData()
+      data1.append("result",(JSON.parse(game_4)).score)
+      data1.append("time", (JSON.parse(game_4)).time)
+      data1.append("game_number", 4)
+      data1.append("game_title",'Сосчитай фигуры')
+      data1.append("user_id", user.id)
+           fetch('https://api.abbas.uz/api/v1/game_user/', {
+             method: 'POST',
+             body: data1
+           })
+           .then(response => response.json())
+           .then(data => {
+             console.log('Success:', data);
+           })
+           .catch((error) => {
+             console.error('Error:', error);
+           });
+     }
     if(game_5){
         var data1=new FormData()
         data1.append("result",(JSON.parse(game_5)).score)

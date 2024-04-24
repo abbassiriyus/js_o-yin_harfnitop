@@ -119,7 +119,7 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 700px;
+    min-height: 500px;
 }
 .main_action{
     width: 90%;
