@@ -119,14 +119,15 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 500px;
+  padding-top: 4%;
+  padding-bottom: 1%;
 }
 .main_action{
     width: 90%;
     max-width: 800px;
     text-align: center;
     display: flex;
-    min-height: 400px;
+    min-height: 300px;
     justify-content: center;
     align-items: center;
 }
@@ -171,14 +172,7 @@ transition: .5s;
 .main_action button:active{
 scale: 1.2;
 }
-@media (max-width:1600px){
- 
-    main{
-        height: auto !important;
-        padding-top: 30px;
-        padding-bottom: 30px;
-    }
-}
+
 .body_game{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
@@ -213,6 +207,7 @@ scale: 1.2;
         
     }  
 }
+
 @media(max-width:491px){
     .bukva{
         width: 42px;
@@ -224,7 +219,24 @@ scale: 1.2;
         border: 1px solid;
         
     }  
+    
     main button{
         width: 250px;
+    }
+}
+@media(max-width:700px){
+    main{
+        height: auto !important;
+        
+    }
+    .main_action h1{
+        font-size: 20px;
+    }
+    .main_action p{
+        font-size: 15px;
+    }
+    .search h3{
+        font-size: 15px;
+        
     }
 }
