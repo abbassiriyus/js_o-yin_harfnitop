@@ -22,7 +22,7 @@ document.querySelectorAll(".click-result-btn")[params-1].style="background:green
 	vapros_id++
 	if(vapros_id==data.length){
 		var add1={time,score}
-    localStorage.setItem("game_1",JSON.stringify(add1))
+    localStorage.setItem("game_2",JSON.stringify(add1))
 	window.location="./index3.html"
 	}else{
 		setTimeout(() => {
@@ -43,7 +43,8 @@ setInterval(() => {
         document.querySelector('.header-text').innerHTML=` <span class="header-timer">ТАЙМЕР:</span><span class="result">${time}</span><span class="time">секунд</span>`
     }else{
     if(time<=0){
-        localStorage.setItem("game_1",JSON.stringify(add1))
+		var add1={time,score}
+        localStorage.setItem("game_2",JSON.stringify(add1))
         window.location="./index3.html"
     }
     }

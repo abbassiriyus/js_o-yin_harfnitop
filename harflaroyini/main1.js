@@ -53,7 +53,7 @@ setInterval(() => {
             "finish": new Date()
         }
         localStorage.setItem("game_1",JSON.stringify(add1))
-        window.location="./game2.html"
+        window.location="./index2.html"
     }
     }
 }, 100);
