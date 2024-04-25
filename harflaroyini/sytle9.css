@@ -310,4 +310,10 @@ font-size: 23px;
     header{
         height: 57px;
     }
+       .main_action p{
+        margin-bottom: 10px;
+    }
+    .main_action h1{
+        margin-bottom: 10px;
+    }
   }

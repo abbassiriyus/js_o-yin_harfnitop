@@ -260,3 +260,14 @@ scale: 1.2;
         height: 56px;
     }
 }
+@media(max-height:550px){
+    header{
+        height: 57px;
+    }
+    .main_action p{
+        margin-bottom: 10px;
+    }
+    .main_action h1{
+        margin-bottom: 10px;
+    }
+  }
