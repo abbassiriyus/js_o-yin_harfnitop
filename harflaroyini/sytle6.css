@@ -208,7 +208,16 @@ scale: 1.2;
         align-items: center;
         border: 1px solid;
         
-    }  
+    } 
+    
+}
+@media(max-width:700px){
+  .main_action p{
+        font-size: 15px;
+    }     
+    .main_action h1{
+        font-size: 25px;
+    }
 }
 @media(max-width:491px){
     .bukva{
@@ -224,4 +233,5 @@ scale: 1.2;
     main button{
         width: 250px;
     }
+  
 }

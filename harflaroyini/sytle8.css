@@ -290,3 +290,20 @@ color: black;
 font-size: 24px;
 height: 57px;
 }
+@media(max-width:700px){
+    .main_action p{
+          font-size: 15px;
+      }     
+      .main_action h1{
+          font-size: 25px;
+      }
+  }
+  @media(max-height:550px){
+    .main_test button{
+        height: 30px;
+        font-size: 15px;
+    }
+    header{
+        height: 57px;
+    }
+  }
