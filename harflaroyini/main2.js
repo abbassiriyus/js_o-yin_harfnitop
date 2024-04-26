@@ -39,13 +39,13 @@ document.querySelectorAll(".click-result-btn")[params-1].style="background:green
 
 setInterval(() => {
     if(time>0 && !stop){
-        time=(time-0.1).toFixed(1)
-        document.querySelector('.header-text').innerHTML=` <span class="header-timer">ТАЙМЕР:</span><span class="result">${time}</span><span class="time">секунд</span>`
+        time=(time-1)
+        document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
     }else{
-    if(time<=0){
+    if(time==0){
 		var add1={time,score}
         localStorage.setItem("game_2",JSON.stringify(add1))
         window.location="./index3.html"
     }
     }
-}, 100);
+}, 1000);

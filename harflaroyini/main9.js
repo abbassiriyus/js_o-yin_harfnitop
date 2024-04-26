@@ -61,7 +61,7 @@ function start_game() {
 
 function select_position(position) {
   if(select_music.position==position){
-document.querySelectorAll('.bukva')[position].style="color:green"
+document.querySelectorAll('.bukva')[position].style="background:green"
 ball+=2
 audio.pause();
 setTimeout(() => {
@@ -90,9 +90,9 @@ setTimeout(() => {
        }
 }, 1000);
    }else{
-     document.querySelectorAll('.bukva')[position].style="color:red"
+     document.querySelectorAll('.bukva')[position].style="background:red"
     setTimeout(() => {
-    document.querySelectorAll('.bukva')[position].style="color:black"
+    document.querySelectorAll('.bukva')[position].style="background:black"
     ball--
     audio.pause();
     if(sound_count<10){ 
@@ -127,7 +127,7 @@ setTimeout(() => {
 setInterval(() => {
     if(!stop){
         document.querySelector(".timer").innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
-        time=(time-0.1).toFixed(1)
+        time=(time-1)
         if(time==0){
             if(sound_count<10){ 
                 sound_count++
@@ -152,7 +152,7 @@ setInterval(() => {
                }
         }
     }
-    }, 100);
+    }, 1000);
 
 function game_Over(){
     var user=JSON.parse(localStorage.getItem("user"))

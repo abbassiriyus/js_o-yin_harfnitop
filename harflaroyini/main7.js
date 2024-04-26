@@ -78,7 +78,7 @@ var a12=1
 setInterval(() => {
     if(!stop){
         document.querySelector(".timer").innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
-        time=(time-0.1).toFixed(1)
+        time=(time-1)
         if(key_selelct==16 && a12==1){
             a=2 
             var add1={
@@ -89,9 +89,8 @@ setInterval(() => {
             }
             localStorage.setItem("game_7",JSON.stringify(add1))
             window.location="./index8.html"
-        
         }
-        if(time<0){
+        if(time==0){
             var add1={
                 "start":start_time,
                 "score": ball,
@@ -102,4 +101,4 @@ setInterval(() => {
             window.location="./index8.html"    
     }
     }
-    }, 100);
+    }, 1000);

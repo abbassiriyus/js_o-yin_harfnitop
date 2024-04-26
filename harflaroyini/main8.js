@@ -162,9 +162,9 @@ function start_test() {
 setInterval(() => {
 if(!stop){
     document.querySelector(".timer").innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
-    time=(time-0.1).toFixed(1)
+    time=(time-1)
     // document.querySelector('.rekord1').innerHTML=`Очки: ${ball}`
-    if(time<0){
+    if(time==0){
     var add1={
         "start":start_time,
         "score": ball,
@@ -176,7 +176,7 @@ if(!stop){
     }
     
 }
-}, 100);
+}, 1000);
 
 function select_button(params) {
     console.log(data.length,key_test);

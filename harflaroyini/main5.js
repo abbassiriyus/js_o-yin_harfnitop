@@ -330,12 +330,12 @@ function ready() {
                     setInterval(() => {
                         console.log(time2,stop2);
                         if(stop2 && time2>0){
-                            time2=(time2-0.1).toFixed(1)
+                            time2=(time2-1)
                     document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time2} секунд`
                         }else{
                        stop2=false
                         }
-                    }, 100);
+                    }, 1000);
                 for (var i = 1; i <= n; i++)
                     $("#s" + i)
                     .animate({
@@ -428,7 +428,7 @@ var time=10
 
 setInterval(() => {
     if(!stop && time>0){
-        time=(time-0.1).toFixed(1)
+        time=(time-1)
 document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
     }
     if(time==0){
@@ -467,7 +467,7 @@ document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТА
                
                 }
     }
-}, 100);
+}, 1000);
 
 
 document.addEventListener("DOMContentLoaded", ready);

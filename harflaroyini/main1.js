@@ -42,10 +42,10 @@ document.querySelector('.title').innerHTML=a[randomIndex1]
 }
 setInterval(() => {
     if(time>0 && !stop){
-        time=(time-0.1).toFixed(1)
+        time=(time-1)
         document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
     }else{
-    if(time<=0){
+    if(time==0){
         var add1={
           "start":start_time,
             "score": ball,
@@ -56,7 +56,7 @@ setInterval(() => {
         window.location="./index2.html"
     }
     }
-}, 100);
+}, 1000);
 
 
 
