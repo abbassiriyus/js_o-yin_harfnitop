@@ -14,8 +14,9 @@ function start_game() {
     document.querySelector('.main_game').style = "display:block"
     stop=false
     audio.pause();
-    time=60
+    
     var sound = data.filter(item => (item.count == sound_count && item.speed == sound_speed))
+    time=sound_count*5
     console.log(sound);
     if(sound.length==0){
       console.log(sound_speed);
@@ -46,10 +47,12 @@ function start_game() {
      select_music = sound[randomIndex1]
     var soundUrl = decodeURIComponent(select_music.sound)
     document.querySelector(".ee").innerHTML="Слушайте аудио . . ."
+    document.querySelector('.stop_select').style="display:flex"
      audio = new Audio(soundUrl)
     audio.play()
     audio.addEventListener("ended", function() {
         document.querySelector(".ee").innerHTML = "Установите окончательный маршрут";
+        document.querySelector('.stop_select').style="display:none"
       });
     for (let i = 0; i < position.length; i++) {
         document.querySelector('.body_game').innerHTML += `<div onclick="select_position(${i})" class="bukva">${position[i]}</div>
