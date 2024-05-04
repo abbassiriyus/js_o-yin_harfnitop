@@ -7,6 +7,14 @@ var data=[{
     "variant3":16,
     "variant4":10,
 },{
+    "vapros":'Сколько на рисунке четырёхуголников?',
+    "image":"img/task4/4.png",
+    "otvet" :10,
+    "variant1":7,
+    "variant2":11,
+    "variant3":12,
+    "variant4":10, 
+},{
     "vapros":'Сколько на рисунке квадратов?',
     "image":"img/task4/2.png",
     "otvet" :10,
@@ -21,14 +29,6 @@ var data=[{
     "variant1":5,
     "variant2":4,
     "variant3":8,
-    "variant4":10, 
-},{
-    "vapros":'Сколько на рисунке четырёхуголников?',
-    "image":"img/task4/4.png",
-    "otvet" :10,
-    "variant1":7,
-    "variant2":11,
-    "variant3":12,
     "variant4":10, 
 },{
     "vapros":'Сколько на рисунке кругов, треугольников и квадратов?',

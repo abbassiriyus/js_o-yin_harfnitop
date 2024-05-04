@@ -45,7 +45,7 @@ setInterval(() => {
         time=(time-1)
         document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
     }else{
-    if(time==0){
+    if(time<=0){
         var add1={
           "start":start_time,
             "score": ball,

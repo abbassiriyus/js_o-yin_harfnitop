@@ -4,6 +4,9 @@ margin: 0;
 font-family: "Open Sans", sans-serif;
 }
 
+body{
+    background: #FFFFFF;
+}
 /* navbar */
 nav{
     background: #3281FF;

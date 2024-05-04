@@ -24,6 +24,7 @@ function start_game() {
 }
 
 function select_data(params,key) {
+  console.log(params,key);
 	if(data[vapros_id].otvet==params){
     score+=2
 document.querySelectorAll(".item")[key].style="background:green"
@@ -35,7 +36,7 @@ document.querySelectorAll(".item")[key].style="background:green"
 	}else{
 		setTimeout(() => {
 			start_game()
-		}, 1000);
+		}, 100);
 	}
 }else{	document.querySelectorAll(".item")[key].style="background:red"
         score--
@@ -47,7 +48,7 @@ document.querySelectorAll(".item")[key].style="background:green"
 setInterval(() => {
     if(time>0 && !stop){
         time=(time-1)
-        document.querySelector('.header-text').innerHTML=` <span class="header-timer">ТАЙМЕР:</span><span class="result">${time}</span><span class="time">секунд</span>`
+        document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТАЙМЕР: ${time} секунд`
     }else{
     if(time==0){
 		var add1={time,score}
