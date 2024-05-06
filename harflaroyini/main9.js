@@ -178,9 +178,6 @@ function game_Over(){
      data1.append("user_id",user.id) 
           fetch('https://api.abbas.uz/api/v1/game_user/', {
             method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
             body: data1
           })
           .then(response => response.json())
