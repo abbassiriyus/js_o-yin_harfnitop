@@ -269,4 +269,7 @@ font-size: 12px;
   .main_action h1{
       margin-bottom: 10px;
   }
+  .search h3 {
+    font-size: 16px;
+  }
 }

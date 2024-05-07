@@ -395,7 +395,7 @@ function ready() {
                     for (var i = 0; i < n; i++) {
                         if (test_rasp(upredm[i].xs, upredm[i].xs + upredm[i].w, upredm[i].ys, upredm[i].ys + upredm[i].h, predm[i].xs, predm[i].xs + predm[i].w, predm[i].ys, predm[i].ys + predm[i].h, predm[i].w, predm[i].h)) {
                             cc++;
-                            upredm[i].elem.style.border = "1px solid green"
+                            upredm[i].elem.style.border = "1px solid #C3D99B"
                         } else {
                             upredm[i].elem.style.border = "1px solid red"
                         }
@@ -443,7 +443,7 @@ document.querySelector('.timer').innerHTML=`<i class='bx bx-time-five'></i> ТА
                     for (var i = 0; i < n; i++) {
                         if (test_rasp(upredm[i].xs, upredm[i].xs + upredm[i].w, upredm[i].ys, upredm[i].ys + upredm[i].h, predm[i].xs, predm[i].xs + predm[i].w, predm[i].ys, predm[i].ys + predm[i].h, predm[i].w, predm[i].h)) {
                             cc++;
-                            upredm[i].elem.style.border = "1px solid green"
+                            upredm[i].elem.style.border = "1px solid #C3D99B"
                         } else {
                             upredm[i].elem.style.border = "1px solid red"
                         }

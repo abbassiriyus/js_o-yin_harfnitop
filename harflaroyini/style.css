@@ -14,7 +14,7 @@ body{
     box-shadow: 0px 0px 3px #8F92A1;
 }
 .navbar .logo{
-    display: flex;
+    display: flex ;
     align-items: center;
     gap: 10px;
 }
@@ -353,4 +353,7 @@ border-radius: 8px;
     .main_action h1{
         margin-bottom: 10px;
     }
+    .search h3 {
+        font-size: 16px;
+      }
   }

@@ -35,25 +35,25 @@ function select_tab(params,id,image) {
    }
     if(select.length==0){
         document.querySelectorAll('.image_game')[params].disabled=true
-        document.querySelectorAll('.image_game')[params].style="opacity:1;color:green"
-        document.querySelectorAll('.bukva')[params].style="color:green"
+        document.querySelectorAll('.image_game')[params].style="opacity:1;color:#C3D99B"
+        document.querySelectorAll('.bukva')[params].style="color:#C3D99B"
         select.push(sendata)
     }else if(select.length==1){
     if(select[0].id==sendata.id){
     key_selelct=key_selelct+2
     document.querySelectorAll('.image_game')[params].disabled=true
-    document.querySelectorAll('.image_game')[params].style="opacity:1;color:green"
-    document.querySelectorAll('.bukva')[params].style="color:green"
+    document.querySelectorAll('.image_game')[params].style="opacity:1;color:#C3D99B"
+    document.querySelectorAll('.bukva')[params].style="color:#C3D99B"
     ball+=2
      select=[]   
      }else{ 
         document.querySelector('.head_action').style="display:block"
         console.log("Ss");
         ball--
-        document.querySelectorAll('.image_game')[params].style="opacity:1;color:red"
-        document.querySelectorAll('.image_game')[select[0].params].style="opacity:1;color:red"
-        document.querySelectorAll('.bukva')[params].style="color:red"
-        document.querySelectorAll('.bukva')[select[0].params].style="color:red"
+        document.querySelectorAll('.image_game')[params].style="opacity:1;color:#F79A8B"
+        document.querySelectorAll('.image_game')[select[0].params].style="opacity:1;color:#F79A8B"
+        document.querySelectorAll('.bukva')[params].style="color:#F79A8B"
+        document.querySelectorAll('.bukva')[select[0].params].style="color:#F79A8B"
        
         document.querySelectorAll('.image_game')[select[0].params].disabled=true
          document.querySelectorAll('.image_game')[params].disabled=true

@@ -64,7 +64,7 @@ function start_game() {
 
 function select_position(position) {
   if(select_music.position==position){
-document.querySelectorAll('.bukva')[position].style="background:green"
+document.querySelectorAll('.bukva')[position].style="background:#C3D99B"
 ball+=2
 audio.pause();
 setTimeout(() => {
@@ -93,7 +93,7 @@ setTimeout(() => {
        }
 }, 1000);
    }else{
-     document.querySelectorAll('.bukva')[position].style="background:red"
+     document.querySelectorAll('.bukva')[position].style="background:#F79A8B"
     setTimeout(() => {
     document.querySelectorAll('.bukva')[position].style="background:black"
     ball--

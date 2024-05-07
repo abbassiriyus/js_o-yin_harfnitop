@@ -74,7 +74,7 @@ if(a[randomIndex1]==b ){
  my_select++
    }
     document.querySelectorAll(".bukva")[key].disabled=true
-    document.querySelectorAll(".bukva")[key].style="color:green;"
+    document.querySelectorAll(".bukva")[key].style="background: #C3D99B;"
 
   ball+=2
 if(my_select==count_text){
@@ -90,10 +90,10 @@ if(my_select==count_text){
 }
 }else{
     if(key!=-1){
-        document.querySelectorAll(".bukva")[key].style="color:red;"
+        document.querySelectorAll(".bukva")[key].style="background: #F79A8B;"
         ball--
         setTimeout(() => {
-            document.querySelectorAll(".bukva")[key].style="color:black !important;"
+            document.querySelectorAll(".bukva")[key].style="background: #black !important;"
             }, 1000)
 }else{
     setTimeout(() => {

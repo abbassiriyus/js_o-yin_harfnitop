@@ -27,7 +27,7 @@ function select_data(params,key) {
   console.log(params,key);
 	if(data[vapros_id].otvet==params){
     score+=2
-document.querySelectorAll(".item")[key].style="background:green"
+document.querySelectorAll(".item")[key].style="background: #C3D99B;box-shadow: 0px 2px 4.8px 0px #00000080 inset;border:none"
 	vapros_id++
 	if(vapros_id==data.length){
 		var add1={time,score}
@@ -38,7 +38,7 @@ document.querySelectorAll(".item")[key].style="background:green"
 			start_game()
 		}, 100);
 	}
-}else{	document.querySelectorAll(".item")[key].style="background:red"
+}else{	document.querySelectorAll(".item")[key].style="background: #F79A8B; box-shadow: 0px 2px 4.8px 0px #00000080 inset;border:none"
         score--
 	}
 	

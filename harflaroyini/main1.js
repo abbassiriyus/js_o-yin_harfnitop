@@ -1,5 +1,5 @@
 var a
-var qiymat=["○","□","×"]
+var qiymat=["〇","◻","✕"]
 var randomIndex1
 var time=60
 var stop=true
@@ -36,7 +36,7 @@ count_text++
 
 
 for (let i = 0; i < a.length; i++) {
-    document.querySelector(".body_game").innerHTML+=`<div onclick="selectP('${a[i]}',${i})" class="bukva">${a[i]}</div>`
+    document.querySelector(".body_game").innerHTML+=`<p style="font-weight:100 !important" onclick="selectP('${a[i]}',${i})" class="bukva">${a[i]}</p>`
 }
 document.querySelector('.title').innerHTML=a[randomIndex1]
 }
@@ -70,24 +70,16 @@ if(a[randomIndex1]==b ){
  my_select++
    }
     document.querySelectorAll(".bukva")[key].disabled=true
-    document.querySelectorAll(".bukva")[key].style="background:green;"
+    document.querySelectorAll(".bukva")[key].style="background:#C3D99B;"
 
   ball+=2
 if(my_select==count_text){
-//     stop=true
-//    var add1={
-//         "start":start_time,  
-//         "score": ball,
-//         "time": time,
-//         "finish": new Date()
-//     }
-//     localStorage.setItem("game_1",JSON.stringify(add1))
-//     window.location="./index5.html"
+
 taxmin()
 }
 }else{
     if(key!=-1){
-        document.querySelectorAll(".bukva")[key].style="background:red;"
+        document.querySelectorAll(".bukva")[key].style="background:#F79A8B;"
         ball--
         setTimeout(() => {
             document.querySelectorAll(".bukva")[key].style="background:white !important;"

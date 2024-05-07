@@ -181,7 +181,7 @@ if(!stop){
 function select_button(params) {
     console.log(data.length,key_test);
 if(data[key_test].otver==params){
- document.querySelectorAll('button')[params].style="background:green !important"
+ document.querySelectorAll('button')[params].style="background: #C3D99B !important;box-shadow: 0px 2px 4.8px 0px #00000080 inset !important;border:none"
  ball+=2
 setTimeout(() => {
     key_test++
@@ -189,5 +189,5 @@ setTimeout(() => {
 }, 1000);
 }else{
     ball--
- document.querySelectorAll('button')[params].style="background:#F79A8B !important"
+ document.querySelectorAll('button')[params].style="background: #F79A8B !important; box-shadow: 0px 2px 4.8px 0px #00000080 inset !important;border:none "
 }}

@@ -34,11 +34,11 @@ function select_data(id,key) {
 	if(id==game_ot){
 score+=2
 		document.querySelectorAll('.card11')[key].disabled=true
-   document.querySelectorAll('.card11')[key].style='background:green'
+   document.querySelectorAll('.card11')[key].style='background:#C3D99B'
    game_ot++
 	}else{
 		if(!document.querySelectorAll('.card11')[key].disabled){
-		document.querySelectorAll('.card11')[key].style='background:red'
+		document.querySelectorAll('.card11')[key].style='background:#F79A8B'
 		score--
 		setTimeout(() => {
 			document.querySelectorAll('.card11')[key].style='background:white'

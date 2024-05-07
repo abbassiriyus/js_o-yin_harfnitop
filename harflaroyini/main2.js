@@ -18,7 +18,7 @@ function start_game() {
 function select_data(params) {
 	if(data[vapros_id].otvet==params){
     score+=2
-document.querySelectorAll(".click-result-btn")[params-1].style="background:green"
+document.querySelectorAll(".click-result-btn")[params-1].style="background: #C3D99B;box-shadow: 0px 2px 4.8px 0px #00000080 inset;border:none"
 	vapros_id++
 	if(vapros_id==data.length){
 		var add1={time,score}
@@ -29,7 +29,7 @@ document.querySelectorAll(".click-result-btn")[params-1].style="background:green
 			start_game()
 		}, 1000);
 	}
-}else{	document.querySelectorAll(".click-result-btn")[params-1].style="background:red"
+}else{	document.querySelectorAll(".click-result-btn")[params-1].style="background: #F79A8B; box-shadow: 0px 2px 4.8px 0px #00000080 inset;border:none "
 		
         score--
 	}

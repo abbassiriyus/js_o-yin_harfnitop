@@ -346,3 +346,21 @@ font-size: 23px;
     0% {opacity: 0;}
     100% {opacity: 1;}
   }
+  @media(max-height:550px){
+    .main_test button{
+        height: 30px;
+        font-size: 15px;
+    }
+    header{
+        height: 57px;
+    }  .main_action p{
+        margin-bottom: 10px;
+    }
+    .main_action h1{
+        margin-bottom: 10px;
+    }
+    .search h3 {
+        font-size: 16px;
+      }
+  }
+ 
