@@ -85,7 +85,7 @@ function register() {
   const fullname= fullnameInput.value
   try {
 if(password.length>7 && password==passwordInput1.value && email.includes('@') && fullname.length>4 && doctup.checked){
-    fetch('https://api.abbas.uz/auth/v1/users', {
+    fetch('http://a0928263.xsph.ru/auth/v1/users', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json'

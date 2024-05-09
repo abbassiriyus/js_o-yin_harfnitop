@@ -176,7 +176,7 @@ function game_Over(){
      data1.append("game_number", 1)
      data1.append("game_title",'Корректурная проба')
      data1.append("user_id",user.id) 
-          fetch('https://api.abbas.uz/api/v1/game_user/', {
+          fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
             method: 'POST',
             body: data1
           })
@@ -195,7 +195,7 @@ function game_Over(){
       data1.append("game_number", 2)
       data1.append("game_title",'Выбери подходящее выражение')
       data1.append("user_id", user.id)
-           fetch('https://api.abbas.uz/api/v1/game_user/', {
+           fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
              method: 'POST',
              body: data1
            })
@@ -214,7 +214,7 @@ function game_Over(){
       data1.append("game_number", 3)
       data1.append("game_title",'Таблица Шульте')
       data1.append("user_id", user.id)
-           fetch('https://api.abbas.uz/api/v1/game_user/', {
+           fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
              method: 'POST',
              body: data1
            })
@@ -233,7 +233,7 @@ function game_Over(){
       data1.append("game_number", 4)
       data1.append("game_title",'Сосчитай фигуры')
       data1.append("user_id", user.id)
-           fetch('https://api.abbas.uz/api/v1/game_user/', {
+           fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
              method: 'POST',
              body: data1
            })
@@ -252,7 +252,7 @@ function game_Over(){
         data1.append("game_number", 5)
         data1.append("game_title",'Расставь предметы')
         data1.append("user_id", user.id)
-             fetch('https://api.abbas.uz/api/v1/game_user/', {
+             fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
                method: 'POST',
                body: data1
              })
@@ -272,7 +272,7 @@ function game_Over(){
         data1.append("game_title",'Поиск букв')
         data1.append("user_id", user.id)
       
-             fetch('https://api.abbas.uz/api/v1/game_user/', {
+             fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
                method: 'POST',
                body: data1
              })
@@ -291,7 +291,7 @@ function game_Over(){
         data1.append("game_number", 7)
         data1.append("game_title",'Пары по картинкам')
         data1.append("user_id", user.id)
-        fetch('https://api.abbas.uz/api/v1/game_user/', {
+        fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
                method: 'POST',
                body: data1
              })
@@ -311,7 +311,7 @@ function game_Over(){
         data1.append("game_number", 8)
         data1.append("game_title",'Выбери вид сверху')
         data1.append("user_id", user.id)
-        fetch('https://api.abbas.uz/api/v1/game_user/', {
+        fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
                method: 'POST',
                body: data1
              })
@@ -330,7 +330,7 @@ function game_Over(){
         data1.append("game_number", 9)
         data1.append("game_title",'Правильный маршрут')
         data1.append("user_id", user.id)
-        fetch('https://api.abbas.uz/api/v1/game_user/', {
+        fetch('http://a0928263.xsph.ru/api/v1/game_user/', {
                method: 'POST',
                body: data1
              })

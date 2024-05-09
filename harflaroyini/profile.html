@@ -144,7 +144,7 @@ document.querySelector('.fio1').style='display:none'
             data1.append("sinf", document.querySelector('select').value)
             data1.append("year", document.querySelector('.fio2').value)
             data1.append("phone", document.querySelector('.fio22').value)
-            fetch(`https://api.abbas.uz/auth/v1/users/${data.id}`, {
+            fetch(`http://a0928263.xsph.ru/auth/v1/users/${data.id}`, {
                 method: 'PUT',
                 body: data1
             })
